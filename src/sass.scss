@@ -1,0 +1,244 @@
+@import 'mixins';
+
+$dark_cyan: #0E8784;
+$light_cyan: #66D2CF;
+$dark_grey: #333D4B;
+$light_grey: #83888F;
+$pale_orange: #FDD6BA;
+$light_cream: #FEFCF7;
+
+.barlowFont{
+    font-family: 'Barlow', sans-serif;
+}
+
+.frauncesFont{
+    font-family: 'Fraunces', serif;
+}
+
+nav{
+    a{
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 15px;
+        letter-spacing: 1.5px;
+    }
+}
+
+.titleAltBig{
+    font-size: 150px;
+    line-height: 72px;
+    font-family: 'Fraunces', serif;
+}
+
+h1{
+   font-size: 72px;
+   line-height: 72px;
+   font-family: 'Fraunces', serif;
+   @include breakpoint(mediumscreen) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    @include breakpoint(smallscreen) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+h2{
+    font-size: 40px;
+    line-height: 48px;
+    font-family: 'Fraunces', serif;
+    @include breakpoint(mediumscreen) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    @include breakpoint(smallscreen) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+ }
+
+ h3{
+    font-size: 32px;
+    line-height: 36px;
+    font-family: 'Fraunces', serif;
+    @include breakpoint(smallscreen) {
+        font-size: 24px;
+        line-height: 32px;
+    }
+ }
+
+ h4{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Fraunces', serif;
+    @include breakpoint(smallscreen) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+ }
+
+ p{
+     font-size: 16px;
+     line-height: 26px;
+     font-family: 'Barlow', sans-serif;
+ }
+
+ button{
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+ }
+
+ .fadeDiv{
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.homeBannerStyle{
+    background-image: url('./assets/home/desktop/image-hero-coffeepress.jpg');
+    background-size: cover;
+    background-position: center;
+    @include breakpoint(mediumscreen) {
+        background-position: center;
+        background-image: url('./assets/home/tablet/image-hero-coffeepress.jpg');
+    }
+    @include breakpoint(smallscreen) {
+        background-image: url('./assets/home/mobile/image-hero-coffeepress.jpg');  
+    }
+}
+
+.homeCollectionStyle{
+    background-image: url('./assets/home/desktop/background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.aboutBannerStyle{
+    background-image: url('./assets/about/desktop/image-hero-whitecup.jpg');
+    background-size: cover;
+    background-position: center;
+    @include breakpoint(mediumscreen) {
+        background-position: center;
+        background-image: url('./assets/about/tablet/image-hero-whitecup.jpg');
+    }
+    @include breakpoint(smallscreen) {
+        background-image: url('./assets/about/mobile/image-hero-whitecup.jpg');  
+    }
+}
+
+.aboutTextAreaStyle{
+    background-image: url('./assets/about/desktop/image-commitment.jpg');
+    background-size: cover;
+    background-position: top;
+    min-height: 400px;
+    @include breakpoint(mediumscreen) {
+        background-size: stretch;
+        background-image: url('./assets/about/tablet/image-commitment.jpg');
+    }
+    @include breakpoint(smallscreen) {
+        background-position: top;
+        background-image: url('./assets/about/mobile/image-commitment.jpg');  
+    }
+}
+
+.aboutQualityStyle{
+    background-image: url('./assets/about/desktop/image-quality.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    min-width: 250px;
+    margin-top: -40px;
+    @include breakpoint(smallscreen) {
+        background-size: stretch;
+        background-image: url('./assets/about/tablet/image-quality.jpg');  
+        min-height: 50px;
+        min-width: 80px;
+        margin-left: -40px;
+        margin-top: -25px;
+    }
+    @include breakpoint(largescreen) {
+        background-size: stretch;
+        background-image: url('./assets/about/tablet/image-quality.jpg');  
+        left: 50%;
+        top: 0%; 
+        min-height: 300px;
+        min-width: 600px;
+        margin-left: -300px;
+        margin-top: -125px;
+    }
+    @include breakpoint(mediumscreen) {
+        min-height: 150px;
+        min-width: 250px;
+        margin-left: -125px;
+        margin-top: -75px;
+        background-position: center;
+        background-image: url('./assets/about/mobile/image-quality.jpg');  
+    }
+}
+
+.subscribeBannerStyle{
+    background-image: url('./assets/plan/desktop/image-hero-blackcup.jpg');
+    background-size: cover;
+    background-position: center;
+    @include breakpoint(mediumscreen) {
+        background-position: center;
+        background-image: url('./assets/plan/tablet/image-hero-blackcup.jpg');
+    }
+    @include breakpoint(smallscreen) {
+        background-image: url('./assets/plan/mobile/image-hero-blackcup.jpg');  
+    }
+}
+
+  .progress .circle,
+  .progress .bar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    vertical-align:top;
+    background-color: transparent;
+    @include breakpoint(mediumscreen) {
+        display: none;
+        visibility: hidden;
+    }
+  }
+  .progress .circle{
+      border: 2px solid $dark_cyan;
+  }
+  .progress .bar {
+    position: relative;
+    width: 33%;
+    height: 1px;
+    margin: 0 0px 17px 0px;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    top:14px;
+    vertical-align:top;
+    background-color: $pale_orange;
+  }
+ 
+  .MuiAccordion-root, .MuiAccordionSummary-root, .MuiButtonBase-root, .MuiAccordionSummary-content
+  {
+      border: none!important;
+      box-shadow: none!important;
+  }
+
+  .modal {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -250px;
+    margin-top: -250px;
+    @include breakpoint(mediumscreen) {
+        width: 400px;
+        height: 500px;
+        margin-left: -200px;
+        margin-top: -200px;
+    }
+    @include breakpoint(smallscreen) {
+        height: 420px;
+    }
+ }
